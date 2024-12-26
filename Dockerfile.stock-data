@@ -1,0 +1,13 @@
+FROM python:3.12-slim
+
+# Cài đặt các thư viện cần thiết
+RUN pip install --no-cache-dir jupyter nbconvert vnstock3 snowflake-connector-python schedule pandas confluent-kafka
+
+# Thiết lập thư mục làm việc
+WORKDIR /app
+
+# Sao chép các file Python vào container
+COPY . .
+
+# Chạy file Python chính để điều phối
+CMD ["python", "main.py"]

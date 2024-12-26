@@ -1,0 +1,18 @@
+{
+  "name": "snowflake-sink-connector",
+  "config": {
+    "connector.class": "com.snowflake.kafka.connector.SnowflakeSinkConnector",
+    "tasks.max": "1",
+    "topics": "stock_vb_rt",
+    "snowflake.url.name": "csjqrjc-cu38499.snowflakecomputing.com",
+    "snowflake.user.name": "MINHANH",
+    "snowflake.password": "Minhanh@1810",
+    "snowflake.private.key": "MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC1JKTKqxa92HNzILIM/b2023l98WVFmANHdULbSBxZn1F5eosxcXbaNNoSNytNeK/YyXejcK7vQrfmgYPp1qLlKe5M4h+I57WudzEVQrrU/2LtlJ9eqfJQ15IPUQv5RBOKgA8f21/3ry4WkK29cRbVQqxdZIFTt5sLDVTFsDw00Kybv1sAjZ8xdYjuHjAhEo7SiY7bTVLZdma6nqqkBT2XXlRY9WAEhbj7bMKWmL/ZsrX1ySvKDJAGXcXJ4VOWRK8FGykrDBglQ+nrCS0hT2QMuo/WMiuVMNbATp92iQNW35WtARBJMVW370xtZ71oOhtruiWai4mrXXoksrEcRM2XAgMBAAECggEAFI+vQO4Aq9X47NWGQGFA+ll7Redztl2V6bOOvjNGPIoQBnj5echGVGhxZGXsvWN4mmPr95pf0PrCwyBqZ82cOeTzjriQGcsrXT1cTeyAJpNCmHMpT+Z8gd6mTqTFdirbCPqWPOh60TOKSLdtcTZ4AAcMZ6Fz6JvLtopx1+q0Os5QBFXHiyaKa0K1zKu6Ca/ZPxMeZXH+9/mupkYoTVVu/38DA6WaLnCVbsbgFMLFkXYy5dgyGWnNLAJ8TzngDClwL7fqIUJ595mv6ykvmK9z16tR0lfWKLuHqpM36H403rG70fwAB/bUX5Vr0nwVtxQYWjaLfsbE/a9bNMDNtRTx0QKBgQDjMrJdlEYi7mGCizVsr2hUeKgndoyXuDUchmnD//GHhLruscjNddTFUAEUUlnNacxKTurCe1WM7PoXHj0EkRmKeq2Wes5jawIRLso36odheuJS1hCs6ydyfnDlqhB9EPITZFXeA2zZUlDHvwdCMTbDeoVNPT8uB68nr5mD1uIraQKBgQDMG1F594MjafXyGpbESkQF36HTkcB50IibYuCsBK8cJRVbKzJKfqDZ0Bgy+fy5gnTynnf/4Pl6c2RKb0ZRFW3kdTna6nKFwDj8DGzWzBBuhRJhNv9OHzl0A9KyaOjNaKFEEw8hwWJ3JuQWfkU4Gn2zvwBFlLqXbxXo37XPXH0Q/wKBgQDYCecNkOa4ZJCYP6NHe+vrFuhezh2WT3VBcJa153RV9uKCAs/8fyUZkp/UIRJ/fzDhH/WfhQOug9Czlu9Snl75DPpvcss6QhCvIhzr2rls+hqnxiIJK3pRJuZXnMUdB7YItonoGL2yUNG7fmx6hq2aZ7DF541iSbBGPnXtpbFesQKBgCbwY0foj403DuPkbLUAEiAovP/XA6h5v0YdxA0tS5cMABoHkK2joN5NFADNrohZuiP7VZtseUwCLbUBq6GWfAOk1afNKJIZzQVQ/YaxIcVj/9CqJGTsEhLvE8hTuW5Oss2A8VcYRMfElKkx59S/QRIEs3GS4VI4sC5gV5g65eVTAoGBANiiu2oqFxjmPzHmb8CkKHNLunT5/jP65T6f4yvjRLiAGxKWZNrQgDHJ1JJMYgaB4+3WIRqIE75JR9GE6bxhPD43huMA90dnugN94X3ZIvYnS8tSmciF58It4h+xBdCiuas02+HKeTpNPalYOUJQYXEBhceAxttRwcBVHy7GzQSP",
+    "snowflake.database.name": "STOCK_DATA",
+    "snowflake.schema.name": "all_stock_infor",
+    "snowflake.table.name": "all_stock_data",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "value.converter": "io.confluent.connect.avro.AvroConverter",
+    "value.converter.schema.registry.url": "http://schema-registry:8081"
+  }
+}

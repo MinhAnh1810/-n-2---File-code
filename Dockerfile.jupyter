@@ -1,0 +1,11 @@
+# Chuyển đổi sang môi trường Jupyter Notebook
+FROM jupyter/base-notebook
+
+# Cài đặt các thư viện Python cần thiết
+RUN pip install --no-cache-dir schedule pandas confluent-kafka
+
+# Sao chép mã nguồn và notebook vào container
+COPY . /home/jovyan/
+
+# Cấu hình Jupyter Notebook
+CMD ["start-notebook.sh", "--NotebookApp.token=''"]

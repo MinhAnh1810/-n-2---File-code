@@ -1,0 +1,4 @@
+vnstock3
+snowflake-connector-python
+pandas
+notebook

@@ -1,0 +1,11 @@
+# Sử dụng Kafka Connect làm base image
+FROM confluentinc/cp-kafka-connect-base:6.1.4
+
+# Thiết lập đường dẫn plugin cho Kafka Connect
+ENV CONNECT_PLUGIN_PATH="/usr/share/java,/usr/share/confluent-hub-components,/data/connect-jars"
+
+# Sao chép connector JAR vào container
+COPY ./snowflake-connector/snowflake-kafka-connector-2.5.0.jar /usr/share/java/snowflake/
+
+# Cấu hình Kafka Connect
+CMD ["bash", "-c", "/etc/confluent/docker/run & tail -f /dev/null"]
